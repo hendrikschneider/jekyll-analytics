@@ -1,6 +1,6 @@
 
 Gem::Specification.new do |s|
-  s.name        = 'jekyll_analytics'
+  s.name        = 'jekyll-analytics'
   s.version     = '0.1.0'
   s.date        = '2017-04-16'
   s.summary     = "Jekyll plugin "
