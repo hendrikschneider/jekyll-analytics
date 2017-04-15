@@ -1,5 +1,6 @@
 # Jekyll::analytics
-Web analytics for your jekyll site. 
+Web analytics for your jekyll site.
+
 Supported:
   - Google Analytics
 
