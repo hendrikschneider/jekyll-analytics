@@ -1,6 +1,4 @@
-require_relative 'Analytics'
-
-class GoogleAnalytics < Analytics
+class GoogleAnalytics 
     #source: https://developers.google.com/analytics/devguides/collection/analyticsjs/
     SETUP_CODE = """
     <!-- Google Analytics -->
@@ -15,31 +13,31 @@ class GoogleAnalytics < Analytics
     <!-- End Google Analytics -->
     """
 
-    ID_REGEX = /^UA-\d+-\d+$/    
+    ID_RE = /^UA-\d+-\d+$/    
 
     INITIALIZE_CODE = "ga('create', '%s', 'auto');"
     PAGEVIEW_CODE = "ga('send', 'pageview');"
     ANONYMIZE_IP_CODE = "ga('set', 'anonymizeIp', %s);"
-    
-    @@commands = nil
-    
-    def initialize(config)
-        if !(ID_REGEX.match(config["id"]))
+
+
+   def initialize(config)
+        if !(ID_RE.match(config["id"]))
             raise ArgumentError, 'Invalid Google analytics key. Id must look like UA-XXXXXX-Y'
         end
 
-        @@commands = []
-        @@commands.push(INITIALIZE_CODE % config["id"])
-        @@commands.push(PAGEVIEW_CODE)
-        self._get_other_commands(config)
+        @commands = []
+        @commands.push(INITIALIZE_CODE % config["id"])
+        @commands.push(PAGEVIEW_CODE)
+        _get_other_commands(config)
     end
 
     def render()
-        return SETUP_CODE % @@commands.join("\n\t")
+        return SETUP_CODE % @commands.join("\n\t")
     end
+
+    private
 
     def _get_other_commands(config)
-        @@commands.push(ANONYMIZE_IP_CODE % config.fetch(:anonymizeIp, false))
+        @commands.push(ANONYMIZE_IP_CODE % config.fetch(:anonymizeIp, false))
     end
-
 end

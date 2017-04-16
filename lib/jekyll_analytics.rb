@@ -1,13 +1,17 @@
-require_relative 'analytics/GoogleAnalytics'
+Dir[File.dirname(__FILE__) + '/analytics/*.rb'].each {|file| puts file[0..-4] }
+
+CONFIG_KEY = "jekyll_analytics"
 
 def inject(site)
   if ENV['JEKYLL_ENV']
-    config = site.site.config["jekyll_analytics"]["ga"]
-    analytics_object = GoogleAnalytics.new(config)
-    site.output = site.output.gsub(/(?=<\/head>)/i, analytics_object.render())
+    site.site.config[CONFIG_KEY].keys().each{ |a|
+      analyzerClass = Module.const_get(a)
+      config = site.site.config[CONFIG_KEY][a]
+      analytics_object = analyzerClass.new(config)
+      site.output = site.output.gsub(/(?=<\/head>)/i, analytics_object.render())
+    }
   end
 end
-
 
 Jekyll::Hooks.register :pages, :post_render do |page|
   inject(page)

@@ -1,8 +1,13 @@
 # Jekyll::analytics
-Easily add webanalytics to your Jekyll site.
+Webanalytics for Jekyll. 
+
+There are many tutorials online to add analytics to jekyll by extending the template. Jekyll-analytics is here to take care of this. Just install the plugin, configure it and you are done :)
+
+Jekyll-analytics: Webanalytics made easy.
 
 Supported:
   - Google Analytics
+  - Piwik
 
 ## Installation
 
@@ -24,13 +29,22 @@ gems:
 Add to your `_config.yml`:
 
 ```yml
-jekyll_analytics: {
-  ga: {
-    id: UA-XXX-YYY,   #Replace UA-XXX-YYY with your google analytics key
-    anonymizeIp: false #optional. Set to true if IPs should be anonymized
-  }
-}
+jekyll_analytics: 
+  GoogleAnalytics:          # Add these if you want to track with Google Analytics
+    id: UA-123-456          # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
+
+  Piwik:                    # Add these if you want to track with Piwik
+    url: piwik.example.com  # Required - url to piwik installation without trailing /
+    siteId: "1234"          # Required - replace with your piwik site id (Write id as string)
 ```
+
+##Usage
+Tracking will be disabled in development mode. To enable production mode set enviroment variable JEKYLL_ENV=production.
+Github pages automatically sets JEKYLL_ENV to production.
+For testing use
+  ```JEKYLL_ENV=production jekyll serve```
+
 ## Contributing
 
 1. Fork it ( https://github.com/hendrik91/jekyll-analytics/fork )
