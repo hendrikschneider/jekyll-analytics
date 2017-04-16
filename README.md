@@ -39,7 +39,7 @@ jekyll_analytics:
     siteId: "1234"          # Required - replace with your piwik site id (Write id as string)
 ```
 
-##Usage
+## Usage
 Tracking will be disabled in development mode. To enable production mode set enviroment variable JEKYLL_ENV=production.
 Github pages automatically sets JEKYLL_ENV to production.
 For testing use
