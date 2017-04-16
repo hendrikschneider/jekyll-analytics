@@ -67,4 +67,4 @@ How to add support for a new tracker:
     end
   end
 ```
-2. Update config
+2. Update Readme.md
