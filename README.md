@@ -56,11 +56,8 @@ For testing use
 How to add support for a new tracker:
 1. Create new tracker class in lib/analytics/YourTracker.rb
   ```
+  #initialize and render must be implemented!
   class YourTracker
-    SETUP_CODE="""
-      js
-    """
-
     def initialize(config)
       #validate config
     end
