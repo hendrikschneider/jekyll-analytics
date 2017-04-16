@@ -52,3 +52,22 @@ For testing use
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+How to add support for a new tracker:
+1. Create new tracker class in lib/analytics/YourTracker.rb
+  ```
+  class YourTracker
+    SETUP_CODE="""
+      js
+    """
+
+    def initialize(config)
+      #validate config
+    end
+
+    def render
+      return "Tracking code to insert into html > head"
+    end
+  end
+```
+2. Update config
