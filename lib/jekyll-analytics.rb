@@ -1,4 +1,4 @@
-Dir[File.dirname(__FILE__) + '/analytics/*.rb'].each {|file| puts file[0..-4] }
+Dir[File.dirname(__FILE__) + '/analytics/*.rb'].each {|file| require file[0..-4] }
 
 CONFIG_KEY = "jekyll_analytics"
 
