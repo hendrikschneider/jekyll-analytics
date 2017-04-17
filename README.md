@@ -11,22 +11,28 @@ Supported:
 
 ## Installation
 
-Add to your `Gemfile`:
+Add this to your `Gemfile`:
 
 ```
 gem 'jekyll-analytics'
 ```
+Then execute
+```
+bundle
+```
+Or install it yourself
+```
+gem install jekyll-analytics
+```
 
-Add to your `_config.yml`:
-
-```yml
-
+## Configuration
+Edit `_config.yml` to use the plugin:
+```
 gems:
   - jekyll-analytics
 ```
 
-## Configuration
-Add to your `_config.yml`:
+Configure the plugin in `_config.yml` by adding:
 
 ```yml
 jekyll_analytics: 
