@@ -50,7 +50,7 @@ Tracking will be disabled in development mode. To enable production mode set env
 Github pages automatically sets JEKYLL_ENV to production.
 For testing use
 ```
-$JEKYLL_ENV=production jekyll serve
+$ JEKYLL_ENV=production jekyll serve
 ```
 
 ## Contributing
