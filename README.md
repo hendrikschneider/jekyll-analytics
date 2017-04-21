@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hendrik91/jekyll-analytics.svg?branch=master)](https://travis-ci.org/hendrik91/jekyll-analytics)
+
 # Jekyll::analytics
 Webanalytics for Jekyll. 
 
