@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/hendrik91/jekyll-analytics.svg?branch=master)](https://travis-ci.org/hendrik91/jekyll-analytics)
+[![Build Status](https://travis-ci.org/hendrikschneider/jekyll-analytics.svg?branch=master)](https://travis-ci.org/hendrikschneider/jekyll-analytics)
 ![](http://ruby-gem-downloads-badge.herokuapp.com/jekyll-analytics?type=total)
 
 # Jekyll::analytics
