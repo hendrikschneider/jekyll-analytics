@@ -18,7 +18,7 @@ gem 'jekyll-analytics'
 ```
 Then execute
 ```
-bundle
+$ bundle
 ```
 Or install it yourself
 ```
@@ -36,11 +36,11 @@ Configure the plugin in `_config.yml` by adding:
 
 ```yml
 jekyll_analytics: 
-  GoogleAnalytics:          # Add these if you want to track with Google Analytics
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
     id: UA-123-456          # Required - replace with your tracking id
     anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
 
-  Piwik:                    # Add these if you want to track with Piwik
+  Piwik:                    # Add, if you want to track with Piwik
     url: piwik.example.com  # Required - url to piwik installation without trailing /
     siteId: "1234"          # Required - replace with your piwik site id (Write id as string)
 ```
@@ -49,7 +49,9 @@ jekyll_analytics:
 Tracking will be disabled in development mode. To enable production mode set enviroment variable JEKYLL_ENV=production.
 Github pages automatically sets JEKYLL_ENV to production.
 For testing use
-  ```JEKYLL_ENV=production jekyll serve```
+```
+$JEKYLL_ENV=production jekyll serve
+```
 
 ## Contributing
 
