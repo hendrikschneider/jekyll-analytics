@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Hendrik Schneider"]
   s.email       = ''
   s.files       = ["lib/jekyll-analytics.rb", "lib/analytics/GoogleAnalytics.rb", "lib/analytics/Piwik.rb"]
-  s.homepage    = 'https://github.com/hendrik91/jekyll-analytics'
+  s.homepage    = 'https://github.com/hendrikschneider/jekyll-analytics'
   s.license     = 'MIT'
 end
+chn
