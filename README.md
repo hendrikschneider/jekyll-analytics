@@ -9,8 +9,9 @@ There are many tutorials online to add analytics to jekyll by extending the temp
 Jekyll-analytics: Webanalytics made easy.
 
 Supported:
-  - Google Analytics
-  - Piwik
+  - [Google Analytics](https://analytics.google.com/analytics/web/)
+  - [Piwik](https://piwik.org/)
+  - [mPulse](https://www.soasta.com/performance-monitoring/)
 
 ## Installation
 
@@ -46,6 +47,9 @@ jekyll_analytics:
   Piwik:                    # Add, if you want to track with Piwik
     url: piwik.example.com  # Required - url to piwik installation without trailing /
     siteId: "1234"          # Required - replace with your piwik site id (Write id as string)
+
+  MPulse:                   # Add if you want to track performance with mPulse
+    apikey: XXXXX-YYYYY-ZZZZZ-AAAAA-23456   # Required - replace with your mPulse API key
 ```
 
 ## Usage
@@ -78,4 +82,4 @@ How to add support for a new tracker:
     end
   end
 ```
-2. Update Readme.md
+2. Update README.md
