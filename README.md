@@ -32,7 +32,7 @@ gem install jekyll-analytics
 ## Configuration
 Edit `_config.yml` to use the plugin:
 ```
-gems:
+plugins:
   - jekyll-analytics
 ```
 
