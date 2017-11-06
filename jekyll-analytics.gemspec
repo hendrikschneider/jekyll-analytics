@@ -1,8 +1,8 @@
 
 Gem::Specification.new do |s|
   s.name        = 'jekyll-analytics'
-  s.version     = '0.1.4'
-  s.date        = '2017-04-17'
+  s.version     = '0.1.5'
+  s.date        = '2017-11-06'
   s.summary     = "Jekyll plugin "
   s.description = "Plugin to easily add web analytics to your jekyll site without modifying your templates"
   s.authors     = ["Hendrik Schneider"]
