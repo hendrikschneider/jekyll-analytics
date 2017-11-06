@@ -11,4 +11,3 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/hendrikschneider/jekyll-analytics'
   s.license     = 'MIT'
 end
-chn
