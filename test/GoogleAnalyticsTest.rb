@@ -19,7 +19,7 @@ class TestGoogleAnalytics < Test::Unit::TestCase
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-123-456', 'auto');
-\tga('send', 'pageview');
+\tga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
 \tga('set', 'anonymizeIp', false);
     </script>
     <!-- End Google Analytics -->

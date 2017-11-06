@@ -16,7 +16,7 @@ class GoogleAnalytics
     ID_RE = /^UA-\d+-\d+$/    
 
     INITIALIZE_CODE = "ga('create', '%s', 'auto');"
-    PAGEVIEW_CODE = "ga('send', 'pageview');"
+    PAGEVIEW_CODE = "ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});"
     ANONYMIZE_IP_CODE = "ga('set', 'anonymizeIp', %s);"
 
 
