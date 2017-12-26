@@ -17,7 +17,7 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   inject(page)
 end
 
-Jekyll::Hooks.register :post, :post_render do |post|
+Jekyll::Hooks.register :posts, :post_render do |post|
   inject(post)
 end
 
