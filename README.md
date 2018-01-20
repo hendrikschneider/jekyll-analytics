@@ -2,7 +2,7 @@
 ![](http://ruby-gem-downloads-badge.herokuapp.com/jekyll-analytics?type=total)
 
 # Jekyll::analytics
-Webanalytics for Jekyll. 
+Webanalytics for Jekyll.
 
 There are many tutorials online to add analytics to jekyll by extending the template. Jekyll-analytics is here to take care of this. Just install the plugin, configure it and you are done :)
 
@@ -39,14 +39,18 @@ plugins:
 Configure the plugin in `_config.yml` by adding:
 
 ```yml
-jekyll_analytics: 
+jekyll_analytics:
   GoogleAnalytics:          # Add, if you want to track with Google Analytics
     id: UA-123-456          # Required - replace with your tracking id
     anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
 
+  Matomo:                   # Add, if you want to track with Matomo (former Piwik Analytics)
+    url: matomo.example.com # Required - url to Matomo installation without trailing /
+    siteId: "1234"          # Required - replace with your Matomo site id (Write id as string)
+
   Piwik:                    # Add, if you want to track with Piwik
-    url: piwik.example.com  # Required - url to piwik installation without trailing /
-    siteId: "1234"          # Required - replace with your piwik site id (Write id as string)
+    url: piwik.example.com  # Required - url to Piwik installation without trailing /
+    siteId: "1234"          # Required - replace with your Piwik site id (Write id as string)
 
   MPulse:                   # Add if you want to track performance with mPulse
     apikey: XXXXX-YYYYY-ZZZZZ-AAAAA-23456   # Required - replace with your mPulse API key
