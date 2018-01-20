@@ -10,6 +10,7 @@ Jekyll-analytics: Webanalytics made easy.
 
 Supported:
   - [Google Analytics](https://analytics.google.com/analytics/web/)
+  - [Matomo](https://matomo.org/)
   - [Piwik](https://piwik.org/)
   - [mPulse](https://www.soasta.com/performance-monitoring/)
 
