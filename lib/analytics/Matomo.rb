@@ -1,4 +1,4 @@
-class Piwik
+class Matomo
     SETUP_CODE = """
     <!-- Matomo -->
     <script type=\"text/javascript\">
