@@ -1,7 +1,7 @@
 class Piwik
     SETUP_CODE = """
     <!-- Matomo -->
-    <script type="text/javascript">
+    <script type=\"text/javascript\">
       var _paq = _paq || [];
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
