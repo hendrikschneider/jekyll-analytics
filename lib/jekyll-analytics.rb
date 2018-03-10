@@ -3,7 +3,7 @@ Dir[File.dirname(__FILE__) + '/analytics/*.rb'].each {|file| require file[0..-4]
 CONFIG_KEY = "jekyll_analytics"
 
 def inject(site)
-  if ENV['JEKYLL_ENV']
+  if ENV['JEKYLL_ENV'] and site.site.config.has_key? CONFIG_KEY
     site.site.config[CONFIG_KEY].keys().each{ |a|
       analyzerClass = Module.const_get(a)
       config = site.site.config[CONFIG_KEY][a]
