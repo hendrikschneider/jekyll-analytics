@@ -1,2 +1,2 @@
-dist: trusty
+dist: bionic
 language: ruby
