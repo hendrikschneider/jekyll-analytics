@@ -1,3 +1,0 @@
-class Analytics
-
-end

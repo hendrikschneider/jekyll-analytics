@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>lib/analytics/GoogleAnalytics.rb</title>
+    <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <script type="text/javascript" src="./assets/0.2.3/rcov.js"></script>
+  </head>
+  <body>
+    <h1>Jekyll-analytics C0 Coverage Information - Simploco - RCov</h1>
+    <h2>lib/analytics/GoogleAnalytics.rb</h2>
+
+    <div class="report_table_wrapper">
+      <table class='report' id='report_table'>
+        <thead>
+          <tr>
+            <th class="left_align">Name</th>
+            <th class="right_align">Total Lines</th>
+            <th class="right_align">Lines of Code</th>
+            <th class="left_align">Total Coverage</th>
+            <th class="left_align">Code Coverage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="left_align"><a href="lib-analytics-GoogleAnalytics_rb.html">lib/analytics/GoogleAnalytics.rb</a></td>
+            <td class='right_align'><tt>43</tt></td>
+            <td class='right_align'><tt>18</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Key</h3>
+
+    <div class="key"><pre><span class='marked'>Code reported as executed by Ruby looks like this...</span><span class='marked1'>and this: this line is also marked as covered.</span><span class='inferred'>Lines considered as run by rcov, but not reported by Ruby, look like this,</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).</span><span class='uncovered'>Finally, here's a line marked as not executed.</span></pre></div>
+
+    <h3>Coverage Details</h3>
+
+    <table class="details">
+      <tbody>
+        <tr class="marked">
+          <td><pre><a name="line2">2</a> class GoogleAnalytics </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line3">3</a>     #source: https://developers.google.com/analytics/devguides/collection/analyticsjs/</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line4">4</a>     SETUP_CODE = &quot;&quot;&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line5">5</a>     &lt;!-- Google Analytics --&gt;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line6">6</a>     &lt;script&gt;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line7">7</a>     (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line8">8</a>     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line9">9</a>     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line10">10</a>     })(window,document,&#39;script&#39;,&#39;https://www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line11">11</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line12">12</a>     %s</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line13">13</a>     &lt;/script&gt;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line14">14</a>     &lt;!-- End Google Analytics --&gt;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line15">15</a>     &quot;&quot;&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line16">16</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line17">17</a>     ID_RE = /^UA-\d+-\d+$/    </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line18">18</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line19">19</a>     INITIALIZE_CODE = &quot;ga(&#39;create&#39;, &#39;%s&#39;, &#39;auto&#39;);&quot;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line20">20</a>     PAGEVIEW_CODE = &quot;ga(&#39;send&#39;, &#39;pageview&#39;, { &#39;page&#39;: location.pathname + location.search + location.hash});&quot;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line21">21</a>     ANONYMIZE_IP_CODE = &quot;ga(&#39;set&#39;, &#39;anonymizeIp&#39;, %s);&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line22">22</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line23">23</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line24">24</a>    def initialize(config)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line25">25</a>         if !(ID_RE.match(config[&quot;id&quot;]))</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line26">26</a>             raise ArgumentError, &#39;Invalid Google analytics key. Id must look like UA-XXXXXX-Y&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line27">27</a>         end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line28">28</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line29">29</a>         @commands = []</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line30">30</a>         @commands.push(INITIALIZE_CODE % config[&quot;id&quot;])</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line31">31</a>         @commands.push(PAGEVIEW_CODE)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line32">32</a>         _get_other_commands(config)</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line33">33</a>     end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line34">34</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line35">35</a>     def render()</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line36">36</a>         return SETUP_CODE % @commands.join(&quot;\n\t&quot;)</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line37">37</a>     end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line38">38</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line39">39</a>     private</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line40">40</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line41">41</a>     def _get_other_commands(config)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line42">42</a>         @commands.push(ANONYMIZE_IP_CODE % config.fetch(:anonymizeIp, false))</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line43">43</a>     end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line44">44</a> end</pre></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Generated on 2019-10-19 22:22:06 +0200 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+
+  </body>
+</html>
