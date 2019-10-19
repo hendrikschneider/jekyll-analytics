@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/hendrikschneider/jekyll-analytics.svg?branch=master)](https://travis-ci.org/hendrikschneider/jekyll-analytics)
 ![](http://ruby-gem-downloads-badge.herokuapp.com/jekyll-analytics?type=total)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a07904b989dcb7e4e477/maintainability)](https://codeclimate.com/github/hendrikschneider/jekyll-analytics/maintainability)
 
 # Jekyll::analytics
 Webanalytics for Jekyll.
