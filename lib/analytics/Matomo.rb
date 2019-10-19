@@ -1,6 +1,12 @@
 class Matomo
     SETUP_CODE = """
     <!-- Matomo -->
+
+    <!-- Matomo Image Tracker -->
+      <img src=\"%{url}?idsite=%{siteId}&amp;rec=1\" style=\"border:0\" alt=\"\" />
+    <!-- End Matomo -->
+
+
     <script type=\"text/javascript\">
       var _paq = _paq || [];
       _paq.push(['trackPageView']);
