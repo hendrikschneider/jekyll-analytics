@@ -38,6 +38,6 @@ class GoogleAnalytics
     private
 
     def _get_other_commands(config)
-        @commands.push(ANONYMIZE_IP_CODE % config.fetch(:anonymizeIp, false))
+        @commands.push(ANONYMIZE_IP_CODE % config.fetch("anonymizeIp", false))
     end
 end

@@ -28,7 +28,7 @@ class TestGoogleAnalytics < Test::Unit::TestCase
 
     def test_anonymize_true
         googleAnalytics = GoogleAnalytics.new( {"id" => "UA-123-456", "anonymizeIp" => true} )
-        assert_match(/\('set', 'anonymizeIp', false\);/, googleAnalytics.render())
+        assert_match(/\('set', 'anonymizeIp', true\);/, googleAnalytics.render())
     end
 
 end
