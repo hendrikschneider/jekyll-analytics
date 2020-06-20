@@ -4,7 +4,7 @@ class Matomo
 
     <!-- Matomo Image Tracker -->
     <noscript>
-      <img src=\"%{url}?idsite=%{siteId}&amp;rec=1\" style=\"border:0\" alt=\"\" />
+      <img src=\"//%{url}?idsite=%{siteId}&amp;rec=1\" style=\"border:0\" alt=\"\" />
     </noscript>
     <!-- End Matomo -->
 
