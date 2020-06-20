@@ -5,7 +5,7 @@
 # Jekyll::analytics
 Webanalytics for Jekyll.
 
-There are many tutorials online to add analytics to jekyll by extending the template. Jekyll-analytics is here to take care of this. Just install the plugin, configure it and you are done :)
+There are many tutorials online to add analytics to Jekyll by extending the template. Jekyll-analytics is here to take care of this. Just install the plugin, configure it and you are done :)
 
 Jekyll-analytics: Webanalytics made easy.
 
