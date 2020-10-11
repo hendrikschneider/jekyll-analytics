@@ -14,6 +14,7 @@ Supported:
   - [Matomo](https://matomo.org/)
   - [Piwik](https://piwik.org/)
   - [mPulse](https://www.soasta.com/performance-monitoring/)
+  - [Plausible](https://plausible.io)
 
 ## Installation
 
@@ -56,6 +57,10 @@ jekyll_analytics:
 
   MPulse:                   # Add if you want to track performance with mPulse
     apikey: XXXXX-YYYYY-ZZZZZ-AAAAA-23456   # Required - replace with your mPulse API key
+
+  Plausible:
+    domain: 'example.com'   # The domain configured in plausible
+    source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
 ```
 
 ## Usage
