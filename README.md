@@ -60,7 +60,10 @@ jekyll_analytics:
 
   Plausible:
     domain: 'example.com'   # The domain configured in plausible
-    source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
+    source: 'https://plausible.example.com/js/plausible.js' # The source URL of the javascript,
+    404_tracking: true      # Enable 404 error tracking. Also requires changes to your webserver and 404.md
+                            # See https://plausible.io/docs/404-error-pages-tracking for other set up required
+
 ```
 
 ## Usage
