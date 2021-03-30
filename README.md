@@ -15,6 +15,7 @@ Supported:
   - [Piwik](https://piwik.org/)
   - [mPulse](https://www.soasta.com/performance-monitoring/)
   - [Plausible](https://plausible.io)
+  - [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)
 
 ## Installation
 
