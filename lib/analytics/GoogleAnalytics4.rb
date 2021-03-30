@@ -15,8 +15,6 @@ class GoogleAnalytics4
     VALID_G_ID_RE = /\A^G-[a-zA-z\d]+\z/
     VALID_UA_ID_RE = /\A(?i)(UA|YT|MO).+$\z/
 
-    CONFIG_JS = "ga('create', '%s', 'auto');"
-
    def initialize(config)
         if (VALID_UA_ID_RE.match(config["measurement_id"]))
             # The user has used an incompatible ID.
