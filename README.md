@@ -15,6 +15,7 @@ Supported:
   - [Piwik](https://piwik.org/)
   - [mPulse](https://www.soasta.com/performance-monitoring/)
   - [Plausible](https://plausible.io)
+  - [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)
 
 ## Installation
 
@@ -61,6 +62,9 @@ jekyll_analytics:
   Plausible:
     domain: 'example.com'   # The domain configured in plausible
     source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
+
+  CloudflareWebAnalytics:   # Add if you want to track with Cloudflare Web Analytics
+    cf_beacon_token: 'abcdefghijklmnopqrstuvwxyz1234568' # Required - replace with your beacon token (in the script tag: `data-cf-beacon`).
 ```
 
 ## Usage
