@@ -43,9 +43,12 @@ Configure the plugin in `_config.yml` by adding:
 
 ```yml
 jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics (Legacy)
     id: UA-123-456          # Required - replace with your tracking id
     anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
+
+  GoogleAnalytics4:          # Add, if you want to track with Google Analytics 4
+    measurement_id: G-1234567890 # Required - replace with your measurement id
 
   Matomo:                   # Add, if you want to track with Matomo (former Piwik Analytics)
     url: matomo.example.com # Required - url to Matomo installation without trailing /
@@ -62,6 +65,10 @@ jekyll_analytics:
     domain: 'example.com'   # The domain configured in plausible
     source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
 ```
+
+<aside>
+Google Analytics (legacy) with a `UA-` ID and Google Analytics 4 with a `G-` ID can be used simultaneously.
+</aside>
 
 ## Usage
 Tracking will be disabled in development mode. To enable production mode set enviroment variable JEKYLL_ENV=production.
