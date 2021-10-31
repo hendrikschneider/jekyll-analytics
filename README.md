@@ -61,7 +61,7 @@ jekyll_analytics:
 
   Plausible:
     domain: 'example.com'   # The domain configured in plausible
-    source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript*
+    source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
 
   CounterDotDev:
     user: 'SomeUser'  # Your username on counter.dev (it is the value for the key "user" on your tracking code)
