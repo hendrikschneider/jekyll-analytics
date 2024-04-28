@@ -15,6 +15,7 @@ Supported:
   - [Piwik](https://piwik.org/)
   - [mPulse](https://www.soasta.com/performance-monitoring/)
   - [Plausible](https://plausible.io)
+  - [PostHog](https://posthog.com/)
 
 ## Installation
 
@@ -59,8 +60,12 @@ jekyll_analytics:
     apikey: XXXXX-YYYYY-ZZZZZ-AAAAA-23456   # Required - replace with your mPulse API key
 
   Plausible:
-    domain: 'example.com'   # The domain configured in plausible
-    source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
+    domain: "example.com" # The domain configured in plausible
+    source: "https://plausible.example.com/js/plausible.js" # The source of the javascript
+
+  PostHog:
+    url: "https://us.i.posthog.com" # Required - replace with the url of post hog analytics
+    apikey: "phc_xxyy" # Required - replace with the apikey of post hog analytics
 ```
 
 ## Usage
