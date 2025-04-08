@@ -1,0 +1,27 @@
+name: Release to RubyGems
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.6'
+
+    - name: Build gem
+      run: gem build jekyll-analytics.gemspec
+
+    - name: Publish to RubyGems
+      run: gem push jekyll-analytics-*.gem
+      env:
+        RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
