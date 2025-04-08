@@ -15,6 +15,7 @@ Supported:
   - [Piwik](https://piwik.org/)
   - [mPulse](https://www.soasta.com/performance-monitoring/)
   - [Plausible](https://plausible.io)
+  - [Counter](https://counter.dev/)
   - [PostHog](https://posthog.com/)
 
 ## Installation
@@ -60,6 +61,11 @@ jekyll_analytics:
     apikey: XXXXX-YYYYY-ZZZZZ-AAAAA-23456   # Required - replace with your mPulse API key
 
   Plausible:
+    domain: 'example.com'   # The domain configured in plausible
+    source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
+
+  CounterDotDev:
+    user: 'SomeUser'  # Your username on counter.dev (it is the value for the key "user" on your tracking code)
     domain: "example.com" # The domain configured in plausible
     source: "https://plausible.example.com/js/plausible.js" # The source of the javascript
 
