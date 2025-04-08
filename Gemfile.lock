@@ -5,6 +5,8 @@ GEM
     json (2.3.1)
     power_assert (2.0.0)
     rake (13.0.0)
+    power_assert (1.1.5)
+    rake (13.0.6)
     simplecov (0.17.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
