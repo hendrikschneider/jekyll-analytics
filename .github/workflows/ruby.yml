@@ -16,5 +16,6 @@ jobs:
     - name: Build and test with Rake
       run: |
         gem install bundler -v 2.4.22
+        gem update --system 3.2.3
         bundle install --jobs 4 --retry 3
         bundle exec rake
