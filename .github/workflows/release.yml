@@ -1,4 +1,4 @@
-name: Release to npm
+name: Release to RubyGems
 
 on:
   push:
@@ -13,15 +13,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
       with:
-        node-version: '14'
+        ruby-version: '2.6'
 
-    - name: Install dependencies
-      run: npm install
+    - name: Build gem
+      run: gem build jekyll-analytics.gemspec
 
-    - name: Publish to npm
-      run: npm publish
+    - name: Publish to RubyGems
+      run: gem push jekyll-analytics-*.gem
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}

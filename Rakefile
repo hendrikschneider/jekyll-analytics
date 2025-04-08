@@ -6,5 +6,5 @@ task :default => 'run_unit_test'
 
 desc "Build the package"
 task :build do
-    sh "npm run build"
+    sh "gem build jekyll-analytics.gemspec"
 end
