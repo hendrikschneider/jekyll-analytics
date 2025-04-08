@@ -62,7 +62,13 @@ jekyll_analytics:
 
   Plausible:
     domain: 'example.com'   # The domain configured in plausible
-    source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
+    source: 'https://plausible.example.com/js/plausible.js' # The source URL of the javascript,
+    host: 'https://plausible.example.com' # The base URL of the plausible host, only needed for embed_tracker
+    404_tracking: true      # Enable 404 error tracking. Also requires changes to your webserver and 404.md
+                            # See https://plausible.io/docs/404-error-pages-tracking for other set up required
+    embed_tracker: true     # embed the tracking code instead of loading the javascript; this removes one
+                            # call from page loading and circumvents adblockers; this uses `host` to generate
+                            # the correct callback destination
 
   CounterDotDev:
     user: 'SomeUser'  # Your username on counter.dev (it is the value for the key "user" on your tracking code)
