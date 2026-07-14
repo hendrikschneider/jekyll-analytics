@@ -17,6 +17,7 @@ Supported:
   - [Plausible](https://plausible.io)
   - [Counter](https://counter.dev/)
   - [PostHog](https://posthog.com/)
+  - [Umami](https://umami.is/)
 
 ## Installation
 
@@ -78,6 +79,18 @@ jekyll_analytics:
   PostHog:
     url: "https://us.i.posthog.com" # Required - replace with the url of post hog analytics
     apikey: "phc_xxyy" # Required - replace with the apikey of post hog analytics
+
+  Umami:                    # Add, if you want to track with Umami
+    website_id: "94db1cb1-74f4-4a40-ad6c-962362670409" # Required - your Umami website id
+    source: "https://cloud.umami.is/script.js" # Optional - defaults to Umami Cloud (SaaS). Set to your self-hosted script URL for a custom domain
+    host: "https://stats.example.com"          # Optional - data-host-url, only when data destination differs from the script origin
+    domains: "example.com,www.example.com"     # Optional - restrict tracking to these domains
+    auto_track: true                           # Optional - set false to track events manually
+    tag: "homepage-a"                          # Optional - group events under a tag
+    do_not_track: true                         # Optional - respect the browser Do Not Track setting
+    exclude_search: true                       # Optional - do not collect URL search params
+    exclude_hash: true                         # Optional - do not collect the URL hash
+    performance: true                          # Optional - collect Core Web Vitals
 ```
 
 ## Usage
